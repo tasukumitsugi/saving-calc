@@ -8,9 +8,9 @@ document.querySelector("button").addEventListener("click", () => {
   let busd = parseFloat(setBusd);
   for (let i = 0; i < days; i++) {
     const reward = (busd * 0.1) / 365;
-    // console.log("reward", reward);
     busd = busd + reward;
-    console.log(i, busd);
-    result.insertAdjacentHTML("beforeend", `<p>${i + 1}: ${busd}</p>`);
+    result.insertAdjacentHTML("beforeend", `<p>${i + 1}: ${busd} (${reward})</p>`);
+    // console.log("reward", reward);
+    // console.log(i, busd);
   }
 });
